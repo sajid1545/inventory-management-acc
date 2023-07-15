@@ -12,6 +12,7 @@ mongoose.connect(process.env.MONGO_URI).then(() => {
 app.use("/api/v1/product", require("./routes/product.routes"));
 app.use("/api/v1/brand", require("./routes/brand.routes"));
 app.use("/api/v1/category", require("./routes/category.routes"));
+app.use("/api/v1/store", require("./routes/store.routes"));
 
 // server
 const port = process.env.PORT || 8080;
