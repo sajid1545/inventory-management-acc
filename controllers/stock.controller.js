@@ -16,7 +16,7 @@ exports.createStock = async (req, res) => {
 };
 
 
-exports.getStocks = async (req, res) => {
+exports.getAllStocks = async (req, res) => {
     try {
         const categories = await getStocksService()
         res.status(400).json({

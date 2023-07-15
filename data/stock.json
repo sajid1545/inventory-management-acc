@@ -1,6 +1,6 @@
 [
 	{
-		"productId": "633476cce0259f4febbfc437",
+		"productId": "64b221f5e38d9e1e80d6e4e3",
 		"name": "Pran Chinigura Aromatic Rice - 5kg Bag",
 		"description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
 		"imageURLs": [
@@ -14,15 +14,15 @@
 		"category": "Rice",
 		"brand": {
 			"name": "Pran",
-			"id": "633177da56be8326a827b812"
+			"id": "64aed70b821d4936b63086e7"
 		},
 		"store": {
 			"name": "chattogram",
-			"id": "633412b419894112041a9018"
+			"id": "64b2bd0190a5a3167c634f59"
 		},
 		"suppliedBy": {
 			"name": "mezbaul abedin persian",
-			"id": "63341c683d8c200adc31b6b6"
+			"id": "64b2c0e775446106081e56a6"
 		},
 		"sellCount": 50
 	},
@@ -39,20 +39,20 @@
 		"category": "Rice",
 		"brand": {
 			"name": "Pran",
-			"id": "633177da56be8326a827b812"
+			"id": "64aed70b821d4936b63086e7"
 		},
 		"store": {
 			"name": "chattogram",
-			"id": "633412b419894112041a9018"
+			"id": "64b2bd0190a5a3167c634f59"
 		},
 		"suppliedBy": {
 			"name": "mezbaul abedin persian",
-			"id": "63341c683d8c200adc31b6b6"
+			"id": "64b2c0e775446106081e56a6"
 		},
 		"sellCount": 10
 	},
 	{
-		"productId": "633476cce0259f4febbfc439",
+		"productId": "64b221b7e38d9e1e80d6e4e0",
 		"name": "Pran Nazirshail Rice - 5kg",
 		"description": "Pran Nazirshail Rice. Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
 		"imageURLs": [
@@ -62,17 +62,19 @@
 		"unit": "bag",
 		"price": "378",
 		"category": "Rice",
+		"quantity": 1100,
+		"status": "in-stock",
 		"brand": {
 			"name": "Pran",
-			"id": "633177da56be8326a827b812"
+			"id": "64aed70b821d4936b63086e7"
 		},
 		"store": {
 			"name": "chattogram",
-			"id": "633412b419894112041a9018"
+			"id": "64b2bd0190a5a3167c634f59"
 		},
 		"suppliedBy": {
 			"name": "mezbaul abedin persian",
-			"id": "63341c683d8c200adc31b6b6"
+			"id": "64b2c0e775446106081e56a6"
 		},
 		"sellCount": 90
 	},
@@ -220,7 +222,7 @@
 	},
 
 	{
-		"productId": "633476cce0259f4febbfc437",
+		"productId": "64b221f5e38d9e1e80d6e4e3",
 		"name": "Pran Chinigura Aromatic Rice - 5kg Bag",
 		"description": "Pran Chinigura Aromatic Rice (Polau). Fresh and Clean, Vacuum Packed. Pran Chinigura Rice can be use in Biriyani, Polau, Firni, Kheer, Khichuri.",
 		"imageURLs": [
@@ -234,15 +236,15 @@
 		"category": "Rice",
 		"brand": {
 			"name": "Pran",
-			"id": "633177da56be8326a827b812"
+			"id": "64aed70b821d4936b63086e7"
 		},
 		"store": {
 			"name": "dhaka",
-			"id": "63316b54df4cc92bd0d74f2d"
+			"id": "64b2bce490a5a3167c634f57"
 		},
 		"suppliedBy": {
-			"name": "razu biswas",
-			"id": "633479c792cc9521ec42370b"
+			"name": "mezbaul abedin persian",
+			"id": "64b2c0e775446106081e56a6"
 		},
 		"sellCount": 50
 	},
