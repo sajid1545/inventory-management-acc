@@ -20,10 +20,10 @@ exports.getAllProductsService = async (filters, queries) => {
 	// 	{ $match: {} },
 	// 	{
 	// 		$lookup: {
-	// 			from: "brands",
-	// 			localField: "brand.name",
-	// 			foreignField: "name",
-	// 			as: "brandDetails",
+	// 			from: "brands", 
+	// 			localField: "brand.name", 
+	// 			foreignField: "name", 
+	// 			as: "brandDetails", 
 	// 		},
 	// 	},
 	// ]);
