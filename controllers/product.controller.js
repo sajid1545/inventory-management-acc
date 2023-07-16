@@ -77,3 +77,15 @@ exports.bulkUpdateProducts = async (req, res, next) => {
 		});
 	}
 };
+
+exports.fileUpload = async (req, res, next) => {
+	try {
+		res.status(201).json(req.files);
+	} catch (error) {
+		res.status(400).json({
+			status: "failed",
+
+			error: error.message,
+		});
+	}
+};
