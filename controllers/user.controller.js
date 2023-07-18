@@ -1,10 +1,26 @@
-const { signupService, findUserByEmail } = require("../services/user.services");
+const { signupService, findUserByEmail, findUserByToken } = require("../services/user.services");
+const { sendEmailWithGmail } = require("../utils/email");
 const { generateToken } = require("../utils/token");
 
 exports.signup = async (req, res, next) => {
 	try {
 		const user = await signupService(req.body);
 
+		const token = user.generateConfirmationToken();
+
+		await user.save({ validateBeforeSave: false });
+
+		const mailData = {
+			to: user.email,
+			subject: "Verify your account",
+			text: `Hi ${user.firstName}, welcome to our app. Please verify your account from : ${
+				req.protocol
+			}://${req.get("host")}${req.originalUrl}/confirmation/${token}`,
+		};
+
+		const result = await sendEmailWithGmail(mailData);
+
+		
 		res.status(200).json({
 			status: "success",
 			message: "Successfully signed up",
@@ -78,6 +94,30 @@ exports.getMe = async (req, res) => {
 		res.status(200).json({
 			status: "success",
 			data: user,
+		});
+	} catch (error) {
+		res.status(500).json({
+			status: "fail",
+			error,
+		});
+	}
+};
+
+exports.confirmEmail = async (req, res) => {
+	try {
+		const { token } = req.params;
+
+		const user = await findUserByToken(token);
+
+		user.status = "active";
+		user.confirmationToken = undefined;
+		user.confirmationTokenExpires = undefined;
+
+		await user.save({ validateBeforeSave: false });
+
+		res.status(200).json({
+			status: "success",
+			message: "Successfully verified your email",
 		});
 	} catch (error) {
 		res.status(500).json({
