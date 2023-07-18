@@ -1,4 +1,5 @@
 const { signupService, findUserByEmail } = require("../services/user.services");
+const { generateToken } = require("../utils/token");
 
 exports.signup = async (req, res, next) => {
 	try {
@@ -45,12 +46,24 @@ exports.login = async (req, res) => {
 			});
 		}
 
-		if (!user.status === "active") {
+		if (user.status !== "active") {
 			return res.status(403).json({
 				status: "failed",
 				error: "Your account is not active yet.",
 			});
 		}
+
+		const token = generateToken(user);
+
+		const { password: pwd, ...others } = user.toObject();
+
+		res.status(200).json({
+			status: "success",
+			data: {
+				others,
+				token,
+			},
+		});
 	} catch (error) {
 		res.status(500).json({
 			status: "fail",
